@@ -1,0 +1,76 @@
+{
+  "name": "npr-app",
+  "version": "0.0.0",
+  "description": "Application music playlist suggestions",
+  "homepage": "none",
+  "author": {
+    "name": "Lola",
+    "email": "lolawebdev@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "apps"
+  ],
+  "main": "app/server.js",
+  "keywords": [
+    ""
+  ],
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-xo": "^0.25.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "express": "^4.17.1",
+    "gridfs-stream": "^1.1.1",
+    "husky": "^1.2.0",
+    "jest": "^23.5.0",
+    "lint-staged": "^8.1.0",
+    "mongoose": "^5.6.0",
+    "prettier": "^1.15.2",
+    "winston": "^3.2.1"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest"
+  },
+  "repository": "lolade94/npr-app",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "mongodb": "^3.2.7",
+    "multer": "^1.4.1",
+    "nodemon": "^1.19.1"
+  }
+}
